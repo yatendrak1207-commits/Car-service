@@ -1,0 +1,75 @@
+.service-card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e9edef;
+    border-radius: 16px;
+
+    transition: 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #cce8e5;
+    box-shadow: 0 12px 30px rgba(15, 47, 58, 0.08);
+}
+
+/* Icon */
+.service-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+    background: #e8f7f5;
+
+    color: #0d9488;
+    font-size: 24px;
+}
+
+/* Content */
+.service-card-content h3 {
+    margin: 0 0 10px;
+
+    color: #102a35;
+    font-size: 19px;
+}
+
+.service-card-content p {
+    margin: 0;
+
+    color: #6b7780;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Bottom */
+.service-card-bottom {
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.service-card-bottom span {
+    color: #263b44;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.service-card-bottom a {
+    color: #0d9488;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.service-card-bottom a:hover {
+    color: #086f68;
+}

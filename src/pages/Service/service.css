@@ -1,0 +1,81 @@
+/* ================= SERVICES PAGE ================= */
+
+.services-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+}
+
+
+/* Page Header */
+
+.services-header {
+    padding: 90px 7% 70px;
+
+    text-align: center;
+}
+
+.services-header>span {
+    color: #0d9488;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.services-header h1 {
+    margin: 14px 0;
+
+    color: #102a35;
+
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.services-header p {
+    max-width: 600px;
+    margin: auto;
+
+    color: #6b7780;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Services Grid */
+
+.all-services {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    padding: 0 7% 100px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .all-services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .services-header {
+        padding: 60px 5% 45px;
+    }
+
+    .all-services {
+        grid-template-columns: 1fr;
+        padding: 0 5% 70px;
+    }
+
+}
