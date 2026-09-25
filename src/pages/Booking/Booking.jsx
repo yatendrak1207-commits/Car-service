@@ -1,7 +1,7 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useNavigate } from "react-router-dom";
 import Navbar from "../../component/Navbar/Navbar";
 import Footer from "../../component/Footer/Footer";
-
+import { useState } from "react";
 import "./Booking.css";
 
 const services = {
@@ -42,17 +42,41 @@ const services = {
     price: "₹999",
   },
 };
-
 function Booking() {
+  const navigate = useNavigate();
+
   const [searchParams] = useSearchParams();
 
   const serviceId = searchParams.get("service");
+  const carId = searchParams.get("car");
 
   const selectedService = services[serviceId] || {
     title: "Select a Service",
     price: "₹0",
   };
+  const cars = {
+    1: {
+      brand: "Hyundai",
+      model: "Creta",
+      number: "RJ 27 AB 1234",
+      fuel: "Petrol",
+    },
+    2: {
+      brand: "Maruti Suzuki",
+      model: "Swift",
+      number: "RJ 27 CD 5678",
+      fuel: "Petrol",
+    },
+  };
 
+  const selectedCar = cars[carId];
+  const [serviceDate, setServiceDate] = useState("");
+  const [serviceTime, setServiceTime] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [pinCode, setPinCode] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
   return (
     <div className="booking-page">
       <Navbar />
@@ -104,7 +128,7 @@ function Booking() {
             <div className="form-group">
               <label>Car Brand</label>
 
-              <select>
+              <select value={selectedCar?.brand || ""} disabled={!!selectedCar}>
                 <option value="">Select brand</option>
                 <option>Maruti Suzuki</option>
                 <option>Hyundai</option>
@@ -121,19 +145,27 @@ function Booking() {
             <div className="form-group">
               <label>Car Model</label>
 
-              <input type="text" placeholder="e.g. Creta" />
+              <input
+                type="text"
+                placeholder="e.g. Creta"
+                value={selectedCar?.model || ""}
+              />
             </div>
 
             <div className="form-group">
               <label>Registration Number</label>
 
-              <input type="text" placeholder="e.g. RJ 27 AB 1234" />
+              <input
+                type="text"
+                placeholder="e.g. RJ 27 AB 1234"
+                value={selectedCar?.number || ""}
+              />
             </div>
 
             <div className="form-group">
               <label>Fuel Type</label>
 
-              <select>
+              <select value={selectedCar?.fuel || ""} disabled={!!selectedCar}>
                 <option value="">Select fuel type</option>
                 <option>Petrol</option>
                 <option>Diesel</option>
@@ -158,13 +190,20 @@ function Booking() {
             <div className="form-group">
               <label>Service Date</label>
 
-              <input type="date" />
+              <input
+                type="date"
+                value={serviceDate}
+                onChange={(e) => setServiceDate(e.target.value)}
+              />
             </div>
 
             <div className="form-group">
               <label>Preferred Time</label>
 
-              <select>
+              <select
+                value={serviceTime}
+                onChange={(e) => setServiceTime(e.target.value)}
+              >
                 <option value="">Select time</option>
                 <option>09:00 AM - 11:00 AM</option>
                 <option>11:00 AM - 01:00 PM</option>
@@ -187,10 +226,11 @@ function Booking() {
 
           <div className="form-group">
             <label>Address</label>
-
             <textarea
               rows="4"
               placeholder="Enter your complete address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
             ></textarea>
           </div>
 
@@ -198,13 +238,23 @@ function Booking() {
             <div className="form-group">
               <label>City</label>
 
-              <input type="text" placeholder="Enter city" />
+              <input
+                type="text"
+                placeholder="Enter city"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+              />
             </div>
 
             <div className="form-group">
               <label>PIN Code</label>
 
-              <input type="text" placeholder="Enter PIN code" />
+              <input
+                type="text"
+                placeholder="Enter PIN code"
+                value={pinCode}
+                onChange={(e) => setPinCode(e.target.value)}
+              />
             </div>
           </div>
 
@@ -222,18 +272,48 @@ function Booking() {
             <div className="form-group">
               <label>Full Name</label>
 
-              <input type="text" placeholder="Enter your name" />
+              <input
+                type="text"
+                placeholder="Enter your name"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+              />
             </div>
 
             <div className="form-group">
               <label>Phone Number</label>
 
-              <input type="tel" placeholder="Enter phone number" />
+              <input
+                type="tel"
+                placeholder="Enter phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </div>
           </div>
 
           {/* Submit */}
-          <button className="confirm-booking-btn">Confirm Booking</button>
+          <button
+            type="button"
+            className="confirm-booking-btn"
+            onClick={() => {
+              navigate("/payment", {
+                state: {
+                  service: selectedService,
+                  car: selectedCar,
+                  date: serviceDate,
+                  time: serviceTime,
+                  address,
+                  city,
+                  pinCode,
+                  fullName,
+                  phone,
+                },
+              });
+            }}
+          >
+            Confirm Booking
+          </button>
         </div>
 
         {/* Summary */}

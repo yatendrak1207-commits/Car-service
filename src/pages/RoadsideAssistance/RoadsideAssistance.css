@@ -1,0 +1,443 @@
+.roadside-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+    color: #17212b;
+}
+
+/* ================= HERO ================= */
+
+.roadside-hero {
+    background: #063b36;
+    color: #ffffff;
+    padding: 70px 7%;
+}
+
+.roadside-hero-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.roadside-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #a7f3d0;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.roadside-hero h1 {
+    margin: 0 0 14px;
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.roadside-hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #d2e5e2;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ================= MAIN ================= */
+
+.roadside-container {
+    max-width: 1150px;
+    margin: -35px auto 60px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.roadside-card {
+    background: #ffffff;
+    border: 1px solid #e5e9eb;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(20, 30, 40, 0.08);
+}
+
+/* ================= SECTION ================= */
+
+.roadside-section {
+    margin-bottom: 30px;
+}
+
+.roadside-section:last-child {
+    margin-bottom: 0;
+}
+
+.roadside-section-title {
+    margin-bottom: 18px;
+}
+
+.roadside-section-title h2 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #202b35;
+}
+
+.roadside-section-title p {
+    margin: 0;
+    color: #89939d;
+    font-size: 13px;
+}
+
+/* ================= ASSISTANCE TYPES ================= */
+
+.assistance-types {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.assistance-type {
+    border: 1px solid #e1e7e9;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.assistance-type:hover {
+    border-color: #0d9488;
+    background: #f0fdfa;
+    transform: translateY(-2px);
+}
+
+.assistance-type.active {
+    border-color: #0d9488;
+    background: #e8f7f5;
+    color: #0d9488;
+}
+
+.assistance-type-icon {
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+.assistance-type span {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ================= EMERGENCY BOX ================= */
+
+.emergency-box {
+    background: #fff8f7;
+    border: 1px solid #f2d9d5;
+    border-radius: 12px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 28px;
+}
+
+.emergency-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #fde9e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    flex-shrink: 0;
+}
+
+.emergency-box h3 {
+    margin: 0 0 3px;
+    font-size: 14px;
+    color: #8f4037;
+}
+
+.emergency-box p {
+    margin: 0;
+    color: #9b6a64;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ================= FORM ================= */
+
+.roadside-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.roadside-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.roadside-field.full {
+    grid-column: 1 / -1;
+}
+
+.roadside-field label {
+    color: #4d5a65;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.roadside-field input,
+.roadside-field select,
+.roadside-field textarea {
+    width: 100%;
+    border: 1px solid #dfe4e8;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #26323c;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.roadside-field input,
+.roadside-field select {
+    height: 44px;
+    padding: 0 13px;
+}
+
+.roadside-field textarea {
+    min-height: 100px;
+    padding: 12px 13px;
+    resize: vertical;
+}
+
+.roadside-field input:focus,
+.roadside-field select:focus,
+.roadside-field textarea:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.08);
+}
+
+.roadside-field input::placeholder,
+.roadside-field textarea::placeholder {
+    color: #a4adb5;
+}
+
+/* ================= LOCATION ================= */
+
+.location-row {
+    display: flex;
+    gap: 10px;
+}
+
+.location-row input {
+    flex: 1;
+}
+
+.location-btn {
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid #cfe5e2;
+    border-radius: 9px;
+    background: #e8f7f5;
+    color: #0d9488;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.location-btn:hover {
+    background: #d8f1ed;
+}
+
+/* ================= REQUEST BUTTON ================= */
+
+.request-assistance-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background: #0d9488;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.request-assistance-btn:hover {
+    background: #0b7f74;
+    transform: translateY(-1px);
+}
+
+/* ================= QUICK CONTACT ================= */
+
+.roadside-quick-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.quick-contact-btn {
+    height: 46px;
+    border-radius: 9px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.call-assistance {
+    background: #e8f7f5;
+    color: #0d9488;
+    border: 1px solid #cfe5e2;
+}
+
+.whatsapp-assistance {
+    background: #edf9f0;
+    color: #278548;
+    border: 1px solid #d4ebd9;
+}
+
+.call-assistance:hover,
+.whatsapp-assistance:hover {
+    transform: translateY(-1px);
+}
+
+/* ================= INFO CARDS ================= */
+
+.roadside-info-section {
+    max-width: 1150px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.roadside-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.roadside-info-card {
+    background: #ffffff;
+    border: 1px solid #e7eaed;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+.roadside-info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    background: #e8f7f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.roadside-info-card h3 {
+    margin: 0 0 7px;
+    font-size: 15px;
+    color: #202b35;
+}
+
+.roadside-info-card p {
+    margin: 0;
+    color: #7b8794;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .roadside-hero {
+        padding: 55px 5%;
+    }
+
+    .roadside-hero h1 {
+        font-size: 34px;
+    }
+
+    .assistance-types {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .roadside-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .roadside-hero {
+        padding: 45px 20px 75px;
+    }
+
+    .roadside-hero h1 {
+        font-size: 29px;
+    }
+
+    .roadside-hero p {
+        font-size: 13px;
+    }
+
+    .roadside-container {
+        margin-top: -40px;
+        padding: 0 14px;
+    }
+
+    .roadside-card {
+        padding: 20px 16px;
+    }
+
+    .assistance-types {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+    }
+
+    .roadside-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadside-field.full {
+        grid-column: auto;
+    }
+
+    .roadside-quick-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .location-row {
+        flex-direction: column;
+    }
+
+    .location-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .roadside-hero h1 {
+        font-size: 26px;
+    }
+
+    .assistance-type {
+        padding: 14px 7px;
+    }
+
+    .roadside-section-title h2 {
+        font-size: 18px;
+    }
+}

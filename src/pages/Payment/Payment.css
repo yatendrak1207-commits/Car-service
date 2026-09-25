@@ -1,0 +1,578 @@
+.payment-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+    color: #17212b;
+}
+
+/* ================= HEADER ================= */
+
+.payment-header {
+    background: #063b36;
+    color: #ffffff;
+    padding: 55px 7%;
+}
+
+.payment-header>div {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.payment-badge {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #a7f3d0;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.payment-header h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+}
+
+.payment-header p {
+    margin: 0;
+    color: #d2e5e2;
+    font-size: 14px;
+}
+
+/* ================= MAIN ================= */
+
+.payment-container {
+    max-width: 1150px;
+    margin: -25px auto 60px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.85fr);
+    gap: 22px;
+}
+
+.payment-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ================= CARD ================= */
+
+.payment-card,
+.price-card {
+    background: #ffffff;
+    border: 1px solid #e5e9eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(20, 30, 40, 0.06);
+}
+
+.payment-card {
+    padding: 25px;
+}
+
+.payment-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.payment-card-header h2,
+.price-card h2 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    color: #202b35;
+}
+
+.payment-card-header p {
+    margin: 0;
+    color: #89939d;
+    font-size: 12px;
+}
+
+.booking-status {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #e9f8f2;
+    color: #15805f;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* ================= BOOKING DETAILS ================= */
+
+.booking-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.booking-detail {
+    padding: 13px;
+    background: #f8fafb;
+    border: 1px solid #edf0f2;
+    border-radius: 9px;
+}
+
+.booking-detail span {
+    display: block;
+    margin-bottom: 5px;
+    color: #89939d;
+    font-size: 10px;
+}
+
+.booking-detail strong {
+    color: #34414c;
+    font-size: 13px;
+}
+
+/* ================= PAYMENT METHODS ================= */
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-method {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 42px 1fr 25px;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #e1e6e8;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.payment-method:hover {
+    border-color: #0d9488;
+    background: #f8fdfc;
+}
+
+.payment-method.active {
+    border-color: #0d9488;
+    background: #effaf8;
+}
+
+.payment-method-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: #f1f5f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.payment-method strong {
+    display: block;
+    color: #26323c;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.payment-method small {
+    display: block;
+    color: #8b969f;
+    font-size: 10px;
+}
+
+.method-radio {
+    color: #c7ced2;
+    font-size: 16px;
+    text-align: right;
+}
+
+.payment-method.active .method-radio {
+    color: #0d9488;
+}
+
+/* ================= INPUTS ================= */
+
+.payment-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.payment-input-section label {
+    color: #4d5a65;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.payment-input-section input {
+    width: 100%;
+    height: 43px;
+    padding: 0 12px;
+    border: 1px solid #dfe4e8;
+    border-radius: 8px;
+    outline: none;
+    color: #26323c;
+    font-size: 12px;
+    background: #ffffff;
+}
+
+.payment-input-section input:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.08);
+}
+
+.payment-input-section input::placeholder {
+    color: #a4adb5;
+}
+
+.card-input-section {
+    margin-top: 2px;
+}
+
+.card-input-section .payment-input-section {
+    margin-top: 15px;
+}
+
+.card-input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* ================= CASH ================= */
+
+.cash-info {
+    margin-top: 18px;
+    padding: 14px;
+    background: #fff9e8;
+    border: 1px solid #f2e4b7;
+    border-radius: 9px;
+    color: #806d35;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ================= PRICE CARD ================= */
+
+.payment-right {
+    position: relative;
+}
+
+.price-card {
+    padding: 24px;
+    position: sticky;
+    top: 20px;
+}
+
+.price-card h2 {
+    margin-bottom: 22px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #7a858e;
+    font-size: 12px;
+}
+
+.price-row strong {
+    color: #34414c;
+    font-size: 13px;
+}
+
+.discount-row span,
+.discount-row strong {
+    color: #15946f;
+}
+
+.price-divider {
+    height: 1px;
+    background: #e8ecee;
+    margin: 20px 0;
+}
+
+.total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.total-row span {
+    color: #34414c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.total-row strong {
+    color: #0d9488;
+    font-size: 22px;
+}
+
+/* ================= COUPON ================= */
+
+.coupon-section {
+    margin-top: 25px;
+}
+
+.coupon-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4d5a65;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.coupon-input {
+    display: flex;
+    gap: 7px;
+}
+
+.coupon-input input {
+    min-width: 0;
+    flex: 1;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #dfe4e8;
+    border-radius: 8px;
+    outline: none;
+    font-size: 11px;
+}
+
+.coupon-input input:focus {
+    border-color: #0d9488;
+}
+
+.coupon-input button {
+    height: 40px;
+    padding: 0 13px;
+    border: 1px solid #0d9488;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0d9488;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.coupon-input button:hover {
+    background: #eaf8f6;
+}
+
+.coupon-section small {
+    display: block;
+    margin-top: 7px;
+    color: #9aa3aa;
+    font-size: 10px;
+}
+
+/* ================= PAY BUTTON ================= */
+
+.pay-now-btn {
+    width: 100%;
+    height: 47px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 9px;
+    background: #0d9488;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.pay-now-btn:hover {
+    background: #0b7f74;
+    transform: translateY(-1px);
+}
+
+.secure-payment {
+    margin-top: 13px;
+    text-align: center;
+    color: #9aa3aa;
+    font-size: 10px;
+}
+
+/* ================= SUCCESS PAGE ================= */
+
+.payment-success-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
+.payment-success-card {
+    width: 100%;
+    max-width: 550px;
+    background: #ffffff;
+    border: 1px solid #e5e9eb;
+    border-radius: 18px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(20, 30, 40, 0.08);
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #e8f7f5;
+    color: #0d9488;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.payment-success-card h1 {
+    margin: 0 0 10px;
+    color: #202b35;
+    font-size: 27px;
+}
+
+.payment-success-card>p {
+    margin: 0 auto 25px;
+    max-width: 400px;
+    color: #7b8791;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.payment-success-details {
+    border: 1px solid #e7ebed;
+    border-radius: 11px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.payment-success-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 15px;
+    border-bottom: 1px solid #edf0f2;
+}
+
+.payment-success-details div:last-child {
+    border-bottom: none;
+}
+
+.payment-success-details span {
+    color: #89939d;
+    font-size: 11px;
+}
+
+.payment-success-details strong {
+    color: #34414c;
+    font-size: 11px;
+    text-align: right;
+}
+
+.success-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.success-actions a {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.success-dashboard-btn {
+    background: #0d9488;
+    color: #ffffff;
+}
+
+.success-dashboard-btn:hover {
+    background: #0b7f74;
+}
+
+.success-home-btn {
+    background: #f1f4f5;
+    color: #44515b;
+}
+
+.success-home-btn:hover {
+    background: #e7ebed;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+    .payment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card {
+        position: static;
+    }
+
+    .payment-header {
+        padding: 45px 20px 65px;
+    }
+
+    .payment-header h1 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 600px) {
+    .payment-container {
+        padding: 0 14px;
+    }
+
+    .payment-card,
+    .price-card {
+        padding: 19px 16px;
+    }
+
+    .booking-details {
+        grid-template-columns: 1fr;
+    }
+
+    .card-input-row {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-card-header {
+        flex-direction: column;
+    }
+
+    .payment-success-card {
+        padding: 28px 18px;
+    }
+
+    .payment-success-card h1 {
+        font-size: 23px;
+    }
+
+    .success-actions {
+        grid-template-columns: 1fr;
+    }
+}

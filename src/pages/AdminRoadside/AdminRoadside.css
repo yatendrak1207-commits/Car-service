@@ -1,0 +1,548 @@
+.admin-roadside-page {
+    min-height: 100vh;
+    background: #f7f8fa;
+}
+
+/* SIDEBAR */
+
+.admin-roadside-sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    border-right: 1px solid #e7ebef;
+    padding: 28px 17px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.admin-roadside-logo {
+    padding: 0 13px 30px;
+    font-size: 23px;
+    font-weight: 800;
+    color: #123c3a;
+}
+
+.admin-roadside-logo span {
+    display: block;
+    margin-top: 4px;
+    color: #0d9488;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.admin-roadside-sidebar nav,
+.admin-roadside-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.admin-roadside-sidebar a {
+    text-decoration: none;
+    color: #687580;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 13px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.admin-roadside-sidebar a:hover,
+.admin-roadside-sidebar a.active {
+    color: #0d9488;
+    background: #e8f6f4;
+}
+
+.admin-roadside-sidebar a span {
+    width: 20px;
+    text-align: center;
+}
+
+.admin-roadside-bottom {
+    margin-top: auto;
+}
+
+/* MAIN */
+
+.admin-roadside-main {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 38px 40px;
+}
+
+.admin-roadside-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.admin-roadside-header>div>span {
+    color: #0d9488;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.admin-roadside-header h1 {
+    margin: 7px 0 5px;
+    color: #17212b;
+    font-size: 30px;
+}
+
+.admin-roadside-header p {
+    margin: 0;
+    color: #75818c;
+    font-size: 14px;
+}
+
+.roadside-emergency-btn {
+    text-decoration: none;
+    background: #17212b;
+    color: #fff;
+    padding: 12px 17px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* STATS */
+
+.roadside-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    margin-bottom: 22px;
+}
+
+.roadside-stats>div {
+    background: #fff;
+    border: 1px solid #e7ebef;
+    border-radius: 13px;
+    padding: 18px 20px;
+}
+
+.roadside-stats span {
+    display: block;
+    color: #7b8791;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.roadside-stats strong {
+    color: #17212b;
+    font-size: 24px;
+}
+
+/* CONTROLS */
+
+.roadside-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.roadside-search {
+    flex: 1;
+    height: 52px;
+    background: #fff;
+    border: 1px solid #e7ebef;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+}
+
+.roadside-search span {
+    color: #8b969f;
+    font-size: 21px;
+}
+
+.roadside-search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+}
+
+.roadside-controls select {
+    width: 170px;
+    border: 1px solid #e7ebef;
+    background: #fff;
+    border-radius: 11px;
+    padding: 0 13px;
+    color: #596772;
+    font-size: 11px;
+    outline: none;
+}
+
+/* CARD */
+
+.roadside-card {
+    background: #fff;
+    border: 1px solid #e7ebef;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.roadside-card-header {
+    padding: 20px;
+    border-bottom: 1px solid #edf0f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roadside-card-header h2 {
+    margin: 0;
+    color: #17212b;
+    font-size: 18px;
+}
+
+.roadside-card-header p {
+    margin: 5px 0 0;
+    color: #8a959f;
+    font-size: 11px;
+}
+
+.request-count {
+    background: #e8f6f4;
+    color: #0d9488;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* TABLE */
+
+.roadside-table-wrapper {
+    overflow-x: auto;
+}
+
+.roadside-table {
+    width: 100%;
+    min-width: 1250px;
+    border-collapse: collapse;
+}
+
+.roadside-table th {
+    text-align: left;
+    padding: 13px 15px;
+    color: #8a959f;
+    font-size: 9px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #edf0f2;
+    white-space: nowrap;
+}
+
+.roadside-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f2f4;
+    color: #5d6a75;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.request-id {
+    color: #0d9488;
+    font-size: 11px;
+}
+
+.roadside-customer {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.roadside-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #e8f6f4;
+    color: #0d9488;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.roadside-customer section strong,
+.roadside-customer section small,
+.roadside-vehicle strong,
+.roadside-vehicle small,
+.request-date strong,
+.request-date small {
+    display: block;
+}
+
+.roadside-customer section strong,
+.roadside-vehicle strong,
+.request-date strong {
+    color: #293640;
+    font-size: 10px;
+}
+
+.roadside-customer section small,
+.roadside-vehicle small,
+.request-date small {
+    color: #929ca5;
+    font-size: 9px;
+    margin-top: 4px;
+}
+
+.assistance-type {
+    display: inline-block;
+    background: #f0f7f7;
+    color: #0d7770;
+    padding: 6px 9px;
+    border-radius: 6px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.request-location {
+    white-space: nowrap;
+    color: #66737d;
+}
+
+.roadside-status {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 7px 9px;
+    font-size: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.roadside-status.pending {
+    background: #fff5df;
+    color: #b57a15;
+}
+
+.roadside-status.assigned {
+    background: #edf3ff;
+    color: #4774bd;
+}
+
+.roadside-status.in-progress {
+    background: #e9f4ff;
+    color: #2672ad;
+}
+
+.roadside-status.completed {
+    background: #e8f7f3;
+    color: #0d9488;
+}
+
+.roadside-status.cancelled {
+    background: #fff0f0;
+    color: #d05252;
+}
+
+/* ACTIONS */
+
+.roadside-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.roadside-actions button {
+    border: 1px solid #dce3e7;
+    background: #fff;
+    color: #0d9488;
+    padding: 7px 9px;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.roadside-actions .delete-request {
+    color: #d05252;
+}
+
+/* EMPTY */
+
+.roadside-empty {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.roadside-empty div {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.roadside-empty h3 {
+    margin: 0;
+    color: #293640;
+}
+
+.roadside-empty p {
+    color: #8a959f;
+    font-size: 12px;
+}
+
+/* MODAL */
+
+.roadside-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 27, 35, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.roadside-modal {
+    width: 100%;
+    max-width: 620px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.roadside-modal-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #edf0f2;
+    padding-bottom: 18px;
+}
+
+.roadside-modal-header span {
+    color: #0d9488;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.roadside-modal-header h2 {
+    margin: 6px 0 0;
+    color: #17212b;
+}
+
+.roadside-modal-header button {
+    border: none;
+    background: #f2f4f5;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.roadside-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 19px;
+    padding: 22px 0;
+}
+
+.roadside-modal-grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.roadside-modal-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+.roadside-modal-grid span {
+    color: #929ca5;
+    font-size: 10px;
+}
+
+.roadside-modal-grid strong {
+    color: #293640;
+    font-size: 12px;
+}
+
+.roadside-modal-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #edf0f2;
+    padding-top: 18px;
+}
+
+.roadside-modal-actions a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px;
+    border-radius: 8px;
+    background: #0d9488;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .roadside-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .admin-roadside-sidebar {
+        width: 210px;
+    }
+
+    .admin-roadside-main {
+        margin-left: 210px;
+        width: calc(100% - 210px);
+        padding: 25px;
+    }
+
+    .admin-roadside-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-roadside-sidebar {
+        display: none;
+    }
+
+    .admin-roadside-main {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .roadside-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .roadside-controls {
+        flex-direction: column;
+    }
+
+    .roadside-controls select {
+        width: 100%;
+        height: 48px;
+    }
+
+    .roadside-modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadside-modal-grid .full-width {
+        grid-column: auto;
+    }
+}
